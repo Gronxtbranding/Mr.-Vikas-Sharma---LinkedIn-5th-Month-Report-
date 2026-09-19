@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LinkedIn Performance Report — Month 5 | Mr. Vikas Sharma</title>
+<meta name="description" content="LinkedIn Performance Report, Month 5, prepared by the GroNXT team for Mr. Vikas Sharma — reach, engagement, network growth and outreach reconciliation." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+/* Chart.js loader: tries three independent CDNs in sequence. Corporate
+   networks, ad-blockers and browser extensions commonly block one CDN
+   (cdnjs.cloudflare.com especially) while allowing others — trying
+   several makes chart loading resilient instead of an all-or-nothing bet. */
+(function(){
+  var sources = [
+    'https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js',
+    'https://unpkg.com/chart.js@4.4.4/dist/chart.umd.min.js'
+  ];
+  var i = 0;
+  function ready(){ window.dispatchEvent(new Event('chartjs-ready')); }
+  function tryNext(){
+    if (i >= sources.length){ ready(); return; }
+    var s = document.createElement('script');
+    s.src = sources[i++];
+    s.onload = ready;
+    s.onerror = tryNext;
+    document.head.appendChild(s);
+  }
+  tryNext();
+})();
+</script>
+<style>
+  :root{
+    --ink: #101828;
+    --ink-soft: #2b3344;
+    --paper: #FAF8F3;
+    --paper-dim: #F0ECE1;
+    --card: #FFFFFF;
+    --line: #E4DFD2;
+    --line-dark: #2A3245;
+    --gold: #B8892F;
+    --gold-soft: #E7CE9C;
+    --teal: #1F6F63;
+    --teal-light: #4C9C8D;
+    --brick: #A85239;
+    --muted: #6B7280;
+    --radius-s: 3px;
+    --radius-m: 6px;
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter', -apple-system, sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  p{ margin:0; line-height:1.6; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+  ::selection{ background:var(--gold-soft); }
+
+  .shell{ display:grid; grid-template-columns:220px 1fr; }
+  @media (max-width:980px){ .shell{ grid-template-columns:1fr; } }
+
+  .rail{
+    position:sticky; top:0; align-self:start; height:100vh;
+    background:var(--ink); color:#cdd3de;
+    padding:28px 20px; display:flex; flex-direction:column; gap:24px;
+    border-right:1px solid var(--line-dark);
+  }
+  @media (max-width:980px){
+    .rail{ position:sticky; height:auto; flex-direction:row; align-items:center;
+      overflow-x:auto; padding:14px 16px; gap:18px; z-index:40; top:0; }
+  }
+  .rail-brand{ font-family:'Fraunces',serif; font-size:15px; color:#fff; line-height:1.3; flex:none; }
+  .rail-brand small{ display:block; font-family:'Inter',sans-serif; font-size:11px; color:#8993A6; font-weight:500; margin-top:2px; }
+  .rail-nav{ display:flex; flex-direction:column; gap:1px; flex:1; }
+  @media (max-width:980px){ .rail-nav{ flex-direction:row; gap:4px; } }
+  .rail-nav a{
+    text-decoration:none; color:#9aa3b5; font-size:12.5px; font-weight:500;
+    padding:8px 10px; border-radius:var(--radius-s); white-space:nowrap;
+    border-left:2px solid transparent; transition:color .15s ease, background .15s ease, border-color .15s ease;
+  }
+  @media (max-width:980px){ .rail-nav a{ border-left:none; border-bottom:2px solid transparent; } }
+  .rail-nav a:hover{ color:#fff; }
+  .rail-nav a.active{ color:#fff; background:rgba(255,255,255,0.06); border-left-color:var(--gold); }
+  @media (max-width:980px){ .rail-nav a.active{ border-left-color:transparent; border-bottom-color:var(--gold); } }
+  .rail-foot{ font-size:11px; color:#6b7488; flex:none; }
+  @media (max-width:980px){ .rail-foot{ display:none; } }
+
+  main{ min-width:0; }
+
+  .hero{
+    background:var(--ink); color:#EDEFF3;
+    padding:64px 0 48px;
+    background-image: radial-gradient(circle at 88% 12%, rgba(184,137,47,0.14), transparent 45%);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .hero-kicker{ font-size:13px; color:var(--gold-soft); font-weight:600; margin-bottom:14px; }
+  .hero h1{ font-size:clamp(30px,4vw,44px); color:#fff; max-width:16ch; line-height:1.08; }
+  .hero-sub{ margin-top:18px; max-width:62ch; font-size:16px; color:#B7BECE; line-height:1.65; }
+  .hero-meta{ display:flex; gap:28px; margin-top:26px; flex-wrap:wrap; font-size:13px; color:#8993A6; }
+  .hero-meta b{ color:#EDEFF3; font-weight:600; }
+
+  .kpi-strip{ margin-top:40px; display:grid; grid-template-columns:repeat(5,1fr); border-top:1px solid var(--line-dark); }
+  @media (max-width:900px){ .kpi-strip{ grid-template-columns:repeat(2,1fr); } }
+  .kpi{ padding:22px 20px 6px 0; border-right:1px solid var(--line-dark); }
+  .kpi:last-child{ border-right:none; }
+  @media (max-width:900px){ .kpi{ border-right:1px solid var(--line-dark); padding:18px 14px; } .kpi:nth-child(2n){ border-right:none; } }
+  .kpi-num{ font-family:'Fraunces',serif; font-size:34px; color:#fff; font-weight:600; line-height:1; }
+  .kpi-num span{ font-size:17px; color:var(--gold-soft); font-weight:500; margin-left:2px; }
+  .kpi-label{ margin-top:8px; font-size:12.5px; color:#9aa3b5; line-height:1.4; }
+  .kpi{ position:relative; cursor:default; }
+  .info-dot{
+    display:inline-flex; align-items:center; justify-content:center; width:14px; height:14px;
+    border-radius:50%; border:1px solid #6b7488; color:#9aa3b5; font-size:9.5px; font-style:normal;
+    font-family:'Inter',sans-serif; vertical-align:middle; margin-left:3px;
+  }
+  .kpi .tip{
+    visibility:hidden; opacity:0; position:absolute; left:0; top:calc(100% + 10px);
+    background:#1B1F27; color:#EDEFF3; font-size:12px; line-height:1.55; font-weight:400;
+    padding:12px 14px; border-radius:8px; width:240px; z-index:30; pointer-events:none;
+    box-shadow:0 12px 32px rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.08);
+    transition:opacity .15s ease, visibility .15s ease;
+  }
+  .kpi:hover .tip, .kpi:focus .tip, .kpi:focus-within .tip{ visibility:visible; opacity:1; }
+  @media (max-width:900px){ .kpi .tip{ width:200px; } }
+
+  .hero-brand{ margin-bottom:16px; }
+  .hero-logo{ height:34px; width:auto; display:block; }
+
+  section{ padding:56px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:28px; flex-wrap:wrap; }
+  .section-head h2{ font-size:26px; }
+  .section-num{ font-family:'Fraunces',serif; font-size:13px; color:var(--gold); font-weight:600; margin-bottom:6px; }
+  .section-intro{ max-width:70ch; color:var(--ink-soft); font-size:15px; margin-bottom:6px; }
+  .section-intro + .section-intro{ margin-top:10px; }
+
+  .grid-2{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:28px; align-items:start; }
+  @media (max-width:900px){ .grid-2{ grid-template-columns:1fr; } }
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media (max-width:900px){ .grid-3{ grid-template-columns:1fr; } }
+  .grid-5{ display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
+  @media (max-width:900px){ .grid-5{ grid-template-columns:repeat(2,1fr); } }
+
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius-m); padding:22px; }
+  .card-title{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:4px; }
+  .card-sub{ font-size:12.5px; color:var(--muted); margin-bottom:14px; }
+
+  ul.bullets{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px; }
+  ul.bullets li{ padding-left:20px; position:relative; font-size:14.5px; color:var(--ink-soft); line-height:1.6; }
+  ul.bullets li::before{ content:""; position:absolute; left:0; top:8px; width:7px; height:7px; background:var(--teal); border-radius:50%; }
+  ul.bullets li b{ color:var(--ink); }
+
+  .stat-mini-row{ display:flex; gap:22px; flex-wrap:wrap; margin-top:20px; }
+  .stat-mini{ min-width:110px; }
+  .stat-mini .n{ font-family:'Fraunces',serif; font-size:22px; font-weight:600; color:var(--teal); }
+  .stat-mini .l{ font-size:11.5px; color:var(--muted); margin-top:2px; }
+
+  .stat-card{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius-m); padding:16px 18px; }
+  .stat-card .n{ font-family:'Fraunces',serif; font-size:26px; font-weight:600; color:var(--ink); }
+  .stat-card .n.teal{ color:var(--teal); }
+  .stat-card .n.gold{ color:var(--gold); }
+  .stat-card .l{ font-size:12px; color:var(--muted); margin-top:4px; line-height:1.4; }
+  .metrics-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:14px; margin-top:26px; }
+
+  .donut-wrap{ position:relative; display:flex; flex-direction:column; align-items:center; }
+  .donut-center{ position:absolute; top:50%; left:50%; transform:translate(-50%,-58%); text-align:center; }
+  .donut-center .n{ font-family:'Fraunces',serif; font-size:26px; font-weight:600; }
+  .donut-center .l{ font-size:10.5px; color:var(--muted); }
+  .legend-row{ display:flex; gap:18px; margin-top:14px; font-size:12.5px; }
+  .legend-dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+
+  .tabbar{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
+  .tabbar button{
+    font-family:'Inter',sans-serif; font-size:13px; font-weight:600; color:var(--ink-soft);
+    background:var(--paper-dim); border:1px solid var(--line); padding:8px 16px; border-radius:20px; cursor:pointer;
+    transition:all .15s ease;
+  }
+  .tabbar button.active{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .tabbar button:hover:not(.active){ border-color:var(--teal); color:var(--teal); }
+
+  table{ width:100%; border-collapse:collapse; font-size:13.5px; }
+  thead th{ text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); font-weight:600; padding:0 10px 10px; border-bottom:1px solid var(--line); }
+  tbody td{ padding:12px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tbody tr:last-child td{ border-bottom:none; }
+  .badge{ display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px; background:var(--teal); color:#fff; }
+  .badge.gold{ background:var(--gold); }
+  .badge.low{ background:#EDE7D8; color:var(--brick); }
+
+  .people-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  @media (max-width:700px){ .people-grid{ grid-template-columns:1fr; } }
+  .person{ border:1px solid var(--line); border-radius:var(--radius-s); padding:12px 14px; background:var(--card); }
+  .person .name{ font-size:13.5px; font-weight:700; color:var(--ink); }
+  .person .role{ font-size:12px; color:var(--muted); margin-top:3px; line-height:1.4; }
+  .person .role .more{ color:var(--gold); font-weight:600; }
+
+  .demo-tabbar{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
+  .funnel{ display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+  .funnel-step{ display:grid; grid-template-columns:150px 1fr 70px; align-items:center; gap:14px; font-size:13px; }
+  .funnel-bar-bg{ background:var(--paper-dim); border-radius:20px; height:14px; overflow:hidden; }
+  .funnel-bar-fill{ height:100%; border-radius:20px; background:linear-gradient(90deg,var(--teal),var(--teal-light)); }
+  .funnel-step .val{ text-align:right; font-weight:700; color:var(--ink); }
+
+  .stacked-bar{ display:flex; height:34px; border-radius:6px; overflow:hidden; margin-top:6px; }
+  .stacked-seg{ display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; }
+  .demo-list{ margin-top:14px; }
+  .demo-row{ margin-bottom:12px; }
+  .demo-row:last-child{ margin-bottom:0; }
+  .demo-row .demo-top{ display:flex; justify-content:space-between; align-items:baseline; font-size:13px; margin-bottom:5px; }
+  .demo-row .demo-label{ color:var(--ink); font-weight:600; }
+  .demo-row .demo-pct{ color:var(--teal); font-weight:700; }
+  .demo-row .demo-track{ height:7px; background:#EEE9DC; border-radius:4px; overflow:hidden; }
+  .demo-row .demo-fill{ height:100%; background:var(--teal); border-radius:4px; }
+
+  .chip-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .chip{ font-size:12px; padding:6px 12px; border-radius:20px; background:var(--paper-dim); border:1px solid var(--line); color:var(--ink-soft); }
+
+  .conv-cols{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  @media (max-width:700px){ .conv-cols{ grid-template-columns:1fr; } }
+  .conv-list{ list-style:none; margin:10px 0 0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  .conv-list li{ display:flex; justify-content:space-between; font-size:13.5px; padding:8px 12px; background:var(--paper-dim); border-radius:var(--radius-s); }
+  .conv-list li b{ font-weight:700; }
+  .conv-list.leaders li b{ color:var(--teal); }
+  .conv-list.laggards li b{ color:var(--brick); }
+
+  .pipeline-card{ border:1px solid var(--line); border-radius:var(--radius-m); padding:24px; background:var(--card); position:relative; overflow:hidden; }
+  .pipeline-card::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--gold); }
+  .pipeline-card .tag{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold); margin-bottom:10px; }
+  .pipeline-card h3{ font-size:18px; margin-bottom:8px; }
+  .pipeline-card p{ font-size:14px; color:var(--ink-soft); }
+
+  .roadmap-item{ display:grid; grid-template-columns:44px 1fr; gap:18px; padding:20px 0; border-bottom:1px solid var(--line); }
+  .roadmap-item:last-child{ border-bottom:none; }
+  .roadmap-num{ font-family:'Fraunces',serif; font-size:24px; color:var(--gold); font-weight:600; }
+  .roadmap-item h3{ font-size:16px; margin-bottom:6px; }
+  .roadmap-item p{ font-size:14px; color:var(--ink-soft); }
+
+  .search-row{ display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+  .search-row input{
+    flex:1; min-width:220px; font-family:'Inter'; font-size:13.5px; padding:10px 14px;
+    border:1px solid var(--line); border-radius:var(--radius-s); background:var(--paper-dim);
+  }
+  .search-row input:focus{ outline:none; border-color:var(--teal); background:#fff; }
+  .table-scroll{ max-height:460px; overflow-y:auto; border:1px solid var(--line); border-radius:var(--radius-m); }
+  .table-scroll table thead{ position:sticky; top:0; background:var(--card); z-index:2; }
+  .table-scroll table{ margin:0; }
+  .table-scroll thead th{ padding:12px 14px 12px; cursor:pointer; user-select:none; white-space:nowrap; }
+  .table-scroll thead th:hover{ color:var(--teal); }
+  .table-scroll thead th .arrow{ font-size:10px; margin-left:3px; opacity:0.5; }
+  .table-scroll tbody td{ padding:11px 14px; }
+  .table-scroll a.plink{ color:var(--teal); text-decoration:none; font-weight:600; font-size:12.5px; white-space:nowrap; }
+  .table-scroll a.plink:hover{ text-decoration:underline; }
+  .row-count{ font-size:12px; color:var(--muted); margin-top:8px; }
+
+  .mini-org-list{ list-style:none; margin:10px 0 0; padding:0; display:flex; flex-direction:column; gap:6px; }
+  .mini-org-list li{ display:flex; justify-content:space-between; font-size:13px; padding:8px 12px; border-radius:var(--radius-s); background:var(--paper-dim); }
+  .mini-org-list a{ color:var(--teal); text-decoration:none; font-weight:600; }
+  .mini-org-list a:hover{ text-decoration:underline; }
+  .mini-org-list .d{ color:var(--muted); font-size:11.5px; }
+
+  .log-details{ border:1px solid var(--line); border-radius:var(--radius-s); margin-bottom:8px; overflow:hidden; background:var(--card); }
+  .log-details summary{
+    cursor:pointer; list-style:none; padding:13px 16px; font-size:13.5px; font-weight:700;
+    display:flex; justify-content:space-between; align-items:center; background:var(--paper-dim);
+  }
+  .log-details summary::-webkit-details-marker{ display:none; }
+  .log-details summary .count{ font-weight:500; color:var(--muted); font-size:12px; }
+  .log-details summary::after{ content:"+"; font-size:16px; color:var(--muted); margin-left:10px; }
+  .log-details[open] summary::after{ content:"–"; }
+  .log-links{ padding:12px 16px; display:grid; grid-template-columns:repeat(auto-fill, minmax(110px,1fr)); gap:8px; }
+  .log-links a{
+    font-size:12.5px; color:var(--teal); text-decoration:none; font-weight:600;
+    padding:6px 10px; background:var(--paper-dim); border-radius:20px; text-align:center;
+  }
+  .log-links a:hover{ text-decoration:underline; }
+
+  .chart-box{ position:relative; }
+
+  footer{ background:var(--ink); color:#8993A6; padding:36px 0; font-size:12.5px; }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer b{ color:#EDEFF3; }
+
+  .sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <nav class="rail" aria-label="Report sections">
+    <div class="rail-brand">
+      <img src="data:image/png;base64,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" alt="GroNXT" style="height:20px;width:auto;display:block;margin-bottom:11px;">
+      LinkedIn Performance Report
+      <small>Month 5 Cycle</small>
+    </div>
+    <div class="rail-nav" id="railNav">
+      <a href="#overview">Overview</a>
+      <a href="#content">Content Performance</a>
+      <a href="#audience">Audience Demographics</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#network">Network Growth</a>
+      <a href="#reconciliation">Outreach Reconciliation</a>
+      <a href="#pipeline">Opportunities</a>
+      <a href="#connections">Verified Connections</a>
+    </div>
+    <div class="rail-foot">Prepared for<br><b style="color:#cdd3de">Mr. Vikas Sharma</b></div>
+  </nav>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="wrap">
+        <div class="hero-brand">
+          <img src="data:image/png;base64,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" alt="GroNXT logo" class="hero-logo">
+        </div>
+        <div class="hero-kicker">LinkedIn Performance Report · Month 5</div>
+        <h1>LinkedIn Performance Report — Month 5</h1>
+        <p class="hero-sub">Prepared by the GroNXT team for Mr. Vikas Sharma.<br>Goal: Strengthen executive visibility and brand positioning in global program &amp; agile delivery leadership, connected products and AI-augmented engineering through consistent content, senior-network expansion and engagement.</p>
+        <div class="hero-meta">
+          <div>Focus areas: <b>Global Program &amp; Agile Delivery · Connected Products &amp; SDV · AI-Augmented Engineering</b></div>
+          <div>Cycle: <b>Posts 17–20, Month 5</b></div>
+        </div>
+
+        <div class="kpi-strip">
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">1,896</div>
+            <div class="kpi-label">Total Impressions <span class="info-dot">i</span></div>
+            <div class="tip">Total number of times Posts 17–20 appeared on someone's LinkedIn feed this month — the sum of all four posts' individual impression counts.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">4.64<span>%</span></div>
+            <div class="kpi-label">Engagement Rate <span class="info-dot">i</span></div>
+            <div class="tip">Calculated as (Likes + Comments) ÷ Impressions × 100, averaged across Posts 17–20. Post 20 led with a 5.75% rate and the widest reach at 835 impressions.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">216<span>/549</span></div>
+            <div class="kpi-label">Connections Matched — 39.3% <span class="info-dot">i</span></div>
+            <div class="tip">216 of the 549 people on the structured target-company database were confirmed as accepted connections — a 39.3% match rate, the strongest conversion seen for this client to date. A representative sample of 71 of these matches, with full role, company and profile detail, is shown in the Verified Connections table below.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">222</div>
+            <div class="kpi-label">Accepted Connections (Network Export) <span class="info-dot">i</span></div>
+            <div class="tip">Total accepted connections captured in the LinkedIn network export this month, across all sources. 216 of these 222 — 97.3% — are traceable directly back to the structured target list.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">2</div>
+            <div class="kpi-label">Opportunities Generated <span class="info-dot">i</span></div>
+            <div class="tip">2 verified inbound approaches this month: a Director-level opportunity at EPAM Systems (via Manjula Rangaiah, Leadership Hiring) and a discussion on multiple senior-level openings including a Senior Program Manager role at KPIT (via Jayant Moon, Talent Acquisition Group).</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ============ OVERVIEW ============ -->
+    <section id="overview">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Executive Summary</div>
+            <h2>Month 5 Overview</h2>
+          </div>
+        </div>
+        <p class="section-intro">Month 5 delivered the strongest network conversion of the campaign to date, with 216 of 549 targeted professionals now confirmed as connections — a 39.3% match rate — while Posts 17–20 sustained solid engagement, led by Post 20 at 5.75%.</p>
+
+        <div class="metrics-grid">
+          <div class="stat-card"><div class="n">1,896</div><div class="l">Total Impressions</div></div>
+          <div class="stat-card"><div class="n">86</div><div class="l">Total Likes</div></div>
+          <div class="stat-card"><div class="n">2</div><div class="l">Total Comments Received</div></div>
+          <div class="stat-card"><div class="n">549</div><div class="l">Professionals Targeted</div></div>
+          <div class="stat-card"><div class="n">222</div><div class="l">Accepted Connections (Network Export)</div></div>
+          <div class="stat-card"><div class="n teal">216</div><div class="l">Matched to Target List — 39.3%</div></div>
+        </div>
+
+        <div class="grid-2" style="margin-top:24px;">
+          <div class="card">
+            <div class="card-title">Strategic outcomes</div>
+            <div class="card-sub">The developments that defined Month 5</div>
+            <ul class="bullets">
+              <li><b>Visibility &amp; content performance.</b> 1,896 impressions and 86 likes across Posts 17–20, holding a 4.64% combined engagement rate. Post 20 was the standout (835 impressions, 46 likes, 2 comments, 5.75% rate), pulling in nearly 30 named engagers spanning program management, connected-car engineering and automotive delivery leadership.</li>
+              <li><b>Network penetration, sharply up.</b> Of the 549 senior professionals targeted across 22 named automotive/GCC companies, 216 are now confirmed as accepted connections — a 39.3% match rate, the highest conversion recorded for this campaign to date, out of 222 total accepted connections captured in the network export.</li>
+              <li><b>Target-list precision.</b> 216 of the 222 accepted connections (97.3%) trace directly back to the structured target list, showing the outreach is landing almost entirely within the intended automotive-engineering and GCC leadership audience rather than drifting into unrelated contacts.</li>
+              <li><b>Seniority quality (sample view).</b> Among a 71-person representative sample of the 216 matches (with full role, company and profile detail), 48 (67.6%) sit at Director-level or above — including 14 C-Suite/CXOs such as COOs, CHROs and an MD/CEO, and senior VPs across ABB, Wipro and MBRDI.</li>
+              <li><b>Market mapping.</b> Strongest conversion in the sample was at Wipro and Accenture (9 confirmed each), with deep penetration also at Capgemini, ABB, MBRDI and HCLTech — the core of Vikas's target universe across Tier-1 automotive suppliers and Global Capability Centres.</li>
+              <li><b>Inbound opportunities.</b> Direct inbound outreach surfaced a Director-level opportunity at EPAM Systems and a discussion on multiple senior-level openings — including a Senior Program Manager role — at KPIT, both arriving without outbound sales motion.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Seniority of matched network (sample)</div>
+            <div class="card-sub">71-person representative sample of the 216 confirmed matches, by seniority band</div>
+            <div class="funnel" id="seniorityBox" style="margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTENT PERFORMANCE ============ -->
+    <section id="content">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Content Performance</div>
+            <h2>A steady month, capped by a standout close</h2>
+          </div>
+        </div>
+        <p class="section-intro">Content centered on connected-car engineering, agile delivery leadership and AI-augmented product development. Post 20 led decisively on both engagement rate and reach.</p>
+
+        <div class="grid-2" style="margin-top:28px;">
+          <div class="card">
+            <div class="card-title">Impressions vs. engagement rate, by post</div>
+            <div class="card-sub">Bars: impressions (left axis) · Line: engagement rate (right axis)</div>
+            <div class="chart-box" style="height:300px;"><canvas id="chartContent"></canvas></div>
+          </div>
+
+          <div class="card" style="display:flex; flex-direction:column;">
+            <div class="card-title">Post-by-post breakdown</div>
+            <div class="card-sub">Impressions · Likes · Comments · Engagement rate</div>
+            <table>
+              <thead><tr><th>Post</th><th>Impr.</th><th>Likes</th><th>Comments</th><th>Rate</th></tr></thead>
+              <tbody id="postTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AUDIENCE DEMOGRAPHICS ============ -->
+    <section id="audience">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Audience Demographics</div>
+            <h2>Who's actually seeing the content</h2>
+          </div>
+        </div>
+        <p class="section-intro">Native LinkedIn analytics for this period: a snapshot of reach composition and the audience's job title, seniority, location, company, industry and company-size profile.</p>
+
+        <div class="metrics-grid" style="margin-top:20px;">
+          <div class="stat-card"><div class="n">990</div><div class="l">Impressions (Discovery)</div></div>
+          <div class="stat-card"><div class="n">566</div><div class="l">Members Reached</div></div>
+          <div class="stat-card"><div class="n teal">55%</div><div class="l">In-Network (Followers &amp; Connections)</div></div>
+          <div class="stat-card"><div class="n">45%</div><div class="l">Out-of-Network</div></div>
+        </div>
+
+        <div class="grid-2" style="margin-top:24px;">
+          <div class="card">
+            <div class="card-title">Seniority</div>
+            <div class="card-sub">Share of audience, by seniority level</div>
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Senior</span><span class="demo-pct">43%</span></div><div class="demo-track"><div class="demo-fill" style="width:43%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Entry</span><span class="demo-pct">26%</span></div><div class="demo-track"><div class="demo-fill" style="width:26%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Manager</span><span class="demo-pct">12%</span></div><div class="demo-track"><div class="demo-fill" style="width:12%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Director</span><span class="demo-pct">9%</span></div><div class="demo-track"><div class="demo-fill" style="width:9%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">VP</span><span class="demo-pct">2%</span></div><div class="demo-track"><div class="demo-fill" style="width:2%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Training</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Industry</div>
+            <div class="card-sub">Share of audience, by industry</div>
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">IT Services and IT Consulting</span><span class="demo-pct">38%</span></div><div class="demo-track"><div class="demo-fill" style="width:38%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Motor Vehicle Manufacturing</span><span class="demo-pct">26%</span></div><div class="demo-track"><div class="demo-fill" style="width:26%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Software Development</span><span class="demo-pct">9%</span></div><div class="demo-track"><div class="demo-fill" style="width:9%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Technology, Information and Internet</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Appliances, Electrical, and Electronics Manufacturing</span><span class="demo-pct">2%</span></div><div class="demo-track"><div class="demo-fill" style="width:2%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Engineering Services</span><span class="demo-pct">2%</span></div><div class="demo-track"><div class="demo-fill" style="width:2%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Industrial Machinery Manufacturing</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Research Services</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Embedded Software Products</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <div class="card-title">Location</div>
+            <div class="card-sub">Share of audience, by metro area</div>
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Pune/Pimpri-Chinchwad Area</span><span class="demo-pct">19%</span></div><div class="demo-track"><div class="demo-fill" style="width:19%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Greater Bengaluru Area</span><span class="demo-pct">9%</span></div><div class="demo-track"><div class="demo-fill" style="width:9%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Greater Tokyo Area</span><span class="demo-pct">6%</span></div><div class="demo-track"><div class="demo-fill" style="width:6%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Mumbai Metropolitan Region</span><span class="demo-pct">4%</span></div><div class="demo-track"><div class="demo-fill" style="width:4%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Greater Hyderabad Area</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Detroit Metropolitan Area</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Greater Delhi Area</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">San Francisco Bay Area</span><span class="demo-pct">2%</span></div><div class="demo-track"><div class="demo-fill" style="width:2%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Greater Munich Metropolitan Area</span><span class="demo-pct">2%</span></div><div class="demo-track"><div class="demo-fill" style="width:2%;"></div></div></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Company Size</div>
+            <div class="card-sub">Share of audience, by employer size</div>
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">10,001+ employees</span><span class="demo-pct">69%</span></div><div class="demo-track"><div class="demo-fill" style="width:69%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">1,001–5,000 employees</span><span class="demo-pct">6%</span></div><div class="demo-track"><div class="demo-fill" style="width:6%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">51–200 employees</span><span class="demo-pct">4%</span></div><div class="demo-track"><div class="demo-fill" style="width:4%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">501–1,000 employees</span><span class="demo-pct">4%</span></div><div class="demo-track"><div class="demo-fill" style="width:4%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">5,001–10,000 employees</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">11–50 employees</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">201–500 employees</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">2–10 employees</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <div class="card-title">Company</div>
+            <div class="card-sub">Top named employers in the audience</div>
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Tata Consultancy Services</span><span class="demo-pct">17%</span></div><div class="demo-track"><div class="demo-fill" style="width:17%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Cognizant</span><span class="demo-pct">7%</span></div><div class="demo-track"><div class="demo-fill" style="width:7%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">KPIT</span><span class="demo-pct">6%</span></div><div class="demo-track"><div class="demo-fill" style="width:6%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">L&amp;T Technology Services</span><span class="demo-pct">2%</span></div><div class="demo-track"><div class="demo-fill" style="width:2%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Nissan Motor Corporation</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Capgemini</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Tata Elxsi</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Accenture</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Thermo Fisher Scientific</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Job Title</div>
+            <div class="card-sub">Top named job titles in the audience</div>
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Software Engineer</span><span class="demo-pct">6%</span></div><div class="demo-track"><div class="demo-fill" style="width:6%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Project Manager</span><span class="demo-pct">5%</span></div><div class="demo-track"><div class="demo-fill" style="width:5%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">System Engineer</span><span class="demo-pct">3%</span></div><div class="demo-track"><div class="demo-fill" style="width:3%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Program Manager</span><span class="demo-pct">2%</span></div><div class="demo-track"><div class="demo-fill" style="width:2%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Information Technology Analyst</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Solutions Architect</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+              <div class="demo-row"><div class="demo-top"><span class="demo-label">Test Specialist</span><span class="demo-pct">1%</span></div><div class="demo-track"><div class="demo-fill" style="width:1%;"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ELITE ENGAGEMENT ============ -->
+    <section id="engagement">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Engagement</div>
+            <h2>Who engaged, post by post</h2>
+          </div>
+        </div>
+        <p class="section-intro">Named engagement from connected-car, automotive-engineering and program-delivery professionals across Stellantis, Persistent, Cognizant, TCS and Wipro. Mr. Vikas Sharma's own activity as post author is excluded below.</p>
+
+        <div class="tabbar" id="postPeopleTabs" style="margin-top:24px;"></div>
+        <div class="people-grid" id="postPeopleGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ NETWORK GROWTH ============ -->
+    <section id="network">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Network Growth</div>
+            <h2>Targeted outreach, concentrated where it matters</h2>
+          </div>
+        </div>
+        <p class="section-intro">Outreach was directed at Tier-1 automotive engineering suppliers and Global Capability Centres — with HCL Tech, Accenture, Bosch India, Capgemini and Tata Elxsi anchoring the target list of 22 named organizations.</p>
+
+        <div class="card" style="margin-top:28px;">
+          <div class="card-title">Outreach conversion</div>
+          <div class="card-sub">Professionals targeted → confirmed, matched connections</div>
+          <div class="funnel" id="funnelBox"></div>
+        </div>
+
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <div class="card-title">Confirmed connections by organization (sample)</div>
+            <div class="card-sub">Top organizations, from the 71-person representative sample</div>
+            <div class="chart-box" style="height:380px;"><canvas id="chartOrgs"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Confirmed matches by seniority (sample)</div>
+            <div class="card-sub">71-person representative sample, grouped by seniority band</div>
+            <div class="chart-box" style="height:320px;"><canvas id="chartSegment"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECONCILIATION ============ -->
+    <section id="reconciliation">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Outreach Reconciliation</div>
+            <h2>Targeted vs. matched</h2>
+          </div>
+        </div>
+        <p class="section-intro">Of the 549 people on the outreach target list, 216 have confirmed as matched, accepted connections — a 39.3% match rate, the strongest to date for this campaign. The remaining 333 have not yet been confirmed as matched.</p>
+
+        <div class="grid-3" style="margin-top:26px;">
+          <div class="stat-card"><div class="n">549</div><div class="l">People in target list</div></div>
+          <div class="stat-card"><div class="n teal">216</div><div class="l">Matched — 39.3% match rate</div></div>
+          <div class="stat-card"><div class="n">333</div><div class="l">Targeted, not yet confirmed matched</div></div>
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+          <div class="card-title">Composition of the 549 targeted profiles</div>
+          <div class="card-sub">Matched vs. still pending</div>
+          <div class="stacked-bar">
+            <div class="stacked-seg" style="width:39%;background:var(--teal);">216 · Matched (39%)</div>
+            <div class="stacked-seg" style="width:61%;background:var(--gold);">333 · Pending (61%)</div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <div class="card-title">Targeted vs. matched, by organization (sample)</div>
+            <div class="card-sub">People targeted in outreach vs. confirmed matches, from the 71-person sample</div>
+            <div class="chart-box" style="height:460px;"><canvas id="chartTargetVsAccepted"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Conversion rate by organization</div>
+            <div class="card-sub">Matched ÷ targeted, among the 22 primary target firms</div>
+            <div class="conv-cols">
+              <div>
+                <div class="card-sub" style="margin-bottom:6px;">Strongest conversion</div>
+                <ul class="conv-list leaders" id="convLeaders"></ul>
+              </div>
+              <div>
+                <div class="card-sub" style="margin-bottom:6px;">Weakest conversion</div>
+                <ul class="conv-list laggards" id="convLaggards"></ul>
+              </div>
+            </div>
+            <div class="card-title" style="margin-top:22px;">Target-list composition</div>
+            <div class="chip-row" id="targetChips" style="margin-top:8px;"></div>
+            <div class="card-sub" style="margin-top:10px;">22 primary target organizations across automotive engineering, connected-vehicle and GCC employers.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OPPORTUNITIES ============ -->
+    <section id="pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Opportunities</div>
+            <h2>Opportunities Received</h2>
+          </div>
+        </div>
+        <p class="section-intro">Consistent visibility in global program &amp; agile delivery leadership and connected-products conversations is already surfacing direct interest — two separate senior-level role approaches arrived through inbound outreach this cycle, without any active job search motion.</p>
+        <p class="section-intro">These conversations are tracked as a distinct outcome from the 216 confirmed matched connections above, not folded into that match metric.</p>
+
+        <div class="grid-2" style="margin-top:28px;">
+          <div class="pipeline-card">
+            <div class="tag">Opportunity</div>
+            <h3>Manjula Rangaiah</h3>
+            <p>Leadership-hiring consultant (IIM Kozhikode, HR Management &amp; Analytics), reaching out directly about a Director-level opportunity at EPAM Systems, citing Vikas's background as Associate Director at Cognizant and his experience in global program management and digital transformation.</p>
+          </div>
+          <div class="pipeline-card">
+            <div class="tag">Opportunity</div>
+            <h3>Jayant Moon</h3>
+            <p>India &amp; ROW Geo Head, Talent Acquisition Group at KPIT, opening a discussion on multiple senior-level openings and sharing the JD for a Senior Program Manager role — a direct opportunity arriving through the network Vikas has built.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VERIFIED CONNECTIONS ============ -->
+    <section id="connections">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Supporting Data</div>
+            <h2>Verified accepted decision-makers</h2>
+          </div>
+        </div>
+        <p class="section-intro">Here is a list of a few professionals from the 216 total confirmed matches — a representative sample of 71, with role, company and LinkedIn profile, so the connections can be traced directly back to the original target list. Searchable and sortable.</p>
+
+        <div class="card" style="margin-top:24px;">
+          <div class="search-row">
+            <input type="text" id="ledgerSearch" placeholder="Search by name, title or organization…" />
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr>
+                <th data-key="0">Name <span class="arrow">▾</span></th>
+                <th data-key="1">Title <span class="arrow"></span></th>
+                <th data-key="2">Organization <span class="arrow"></span></th>
+                <th data-key="3">Connected <span class="arrow"></span></th>
+                <th data-key="-1">Profile</th>
+              </tr></thead>
+              <tbody id="ledgerBody"></tbody>
+            </table>
+          </div>
+          <div class="row-count" id="ledgerCount"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div><b>LinkedIn Performance Report</b> — Month 5 Cycle · Prepared by the GroNXT team</div>
+        <div>Prepared for <b>Mr. Vikas Sharma</b></div>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script>
+/* ============================================================
+   DATA
+============================================================ */
+const posts = [
+  {id:17, impressions:423, likes:14, comments:0, rate:3.31, tag:null},
+  {id:18, impressions:260, likes:12, comments:0, rate:4.62, tag:null},
+  {id:19, impressions:378, likes:14, comments:0, rate:3.70, tag:null},
+  {id:20, impressions:835, likes:46, comments:2, rate:5.75, tag:"Highest engagement rate & reach"},
+];
+
+const topOrgs = [
+  {name:"Wipro", count:9},
+  {name:"Accenture", count:9},
+  {name:"Capgemini", count:6},
+  {name:"ABB", count:5},
+  {name:"MBRDI", count:5},
+  {name:"HCLTech", count:5},
+  {name:"KPIT", count:4},
+  {name:"General Motors", count:4},
+  {name:"RNTBCI", count:4},
+  {name:"Valeo", count:4},
+  {name:"Maruti Suzuki India", count:3},
+  {name:"Tata Technologies", count:2},
+  {name:"Tata Elxsi", count:2},
+];
+
+const segmentCoverage = [
+  {name:"Director / Head", count:18},
+  {name:"Manager / Lead", count:18},
+  {name:"C-Suite / CXO", count:14},
+  {name:"Vice President (VP)", count:12},
+  {name:"President / MD / Partner", count:4},
+  {name:"Other / Professional", count:4},
+  {name:"General Manager (GM)", count:1},
+];
+
+/* Target list vs confirmed matched, by organization (sample-based company view) */;
+
+/* Target list (sent) vs confirmed accepted, by organization */
+const targetVsAccepted = [
+  {name:"HCLTech", target:91, accepted:5},
+  {name:"Accenture", target:48, accepted:9},
+  {name:"Bosch India", target:46, accepted:1},
+  {name:"Capgemini", target:41, accepted:6},
+  {name:"Tata Elxsi", target:39, accepted:2},
+  {name:"ABB India", target:32, accepted:5},
+  {name:"Aptiv", target:31, accepted:0},
+  {name:"Wipro", target:29, accepted:9},
+  {name:"KPIT Technologies", target:21, accepted:4},
+  {name:"General Motors", target:19, accepted:4},
+  {name:"Maruti Suzuki R&D", target:18, accepted:3},
+  {name:"Quest Global", target:15, accepted:1},
+  {name:"MBRDI", target:15, accepted:5},
+  {name:"RNTBCI", target:15, accepted:4},
+  {name:"Tech Mahindra", target:14, accepted:1},
+  {name:"Ather Energy", target:14, accepted:1},
+  {name:"Tata Technologies", target:13, accepted:2},
+  {name:"Mahindra & Mahindra", target:5, accepted:1},
+  {name:"L&T Technology Services", target:3, accepted:1},
+];
+
+const targetCompanies = ["Capgemini","Accenture","Tech Mahindra","HCL Tech","Tata Elxsi","Capgemini Engineering","Valeo India","Bosch India","ABB India","Ather Energy","Wipro","KPIT Technologies","Aptiv","Maruti Suzuki R&D","Mahindra & Mahindra","Tata Technologies","L&T Technology Services","Quest Global","MBRDI","RNTBCI","General Motors","Continental Automotive India"];
+
+/* Seniority mix of the 71-professional verified sample (of 216 total confirmed matches) */
+const seniorityData = [
+  {label:"Director / Head", value:18, max:18},
+  {label:"Manager / Lead", value:18, max:18},
+  {label:"C-Suite / CXO", value:14, max:18},
+  {label:"Vice President (VP)", value:12, max:18},
+  {label:"President / MD / Partner", value:4, max:18},
+  {label:"Other", value:4, max:18},
+  {label:"General Manager (GM)", value:1, max:18},
+];
+
+const postPeople = {
+  17: [
+    ["Priyanka Jagdale","Automotive FOD Service System Owner | HMI Infotainment Specialist | Connected Car Service","Like"],
+    ["Sonali Raut","Lead Systems Engineer | Automotive Systems | System Validation | Model-Based Development","Like"],
+    ["Vishwajeet Kumar","Automotive Engineer | DevOps Architect | Connected Cars | SDV & AI-DV Architect","Like"],
+    ["Pravinder Singh","Engineering Manager | Vehicle Operability & Commissioning | Connected Car & Smart Cockpit Programs @ Stellantis","Like"],
+    ["Sachin Mulik","Project Lead at Persistent - Automotive V&V | Test Automation - Python | IoT | Telematics","Like"],
+    ["Vijay Kewlani","Project Manager | Certified Scrum Master | PMO | Connected Car Services","Like"],
+    ["Sudipto Poddar","Senior Automotive & EV Validation Engineer | HIL Testing | dSPACE | AI/ML & Data Science","Love"],
+    ["Sunny Kumar Chauhan","Recruitment | Hiring Insider | Resume Writing | LinkedIn Branding","Interest"],
+    ["Neha Somra","Immediate Joiner | SystemEngineering for connected vehicle cloud | Technical Project Manager","Like"],
+    ["Nikhil Naoghare","Building Secure, Scalable, Standalone & Cloud Native apps | Java, Spring Boot, MicroServices","Like"],
+    ["Saquib Ejaz","DevOps Engineer Connected Car | Infotainment | Python | Build and Release Engineer","Interest"],
+    ["Netraraj Singh Chouhan","Test Automation Engineer | SDET | ISTQB certified | Python | Robot Framework","Like"],
+  ],
+  18: [
+    ["Shreya Bhargava","Project Manager for Automotive Semiconductor solutions | PMP Certified","Like"],
+    ["Neha Kumari","Automotive Engineer | Connected Car Services | telematics | Azure | Cloud","Like"],
+    ["Papila Harari","Director at Cognizant Technology Solutions","Like"],
+    ["Pooja Jagtap","Senior Business Analyst | Program Manager | Product Manager | Scrum Master | Cyber Security","Like"],
+    ["Tushar Kulkarni","Automotive SME at KPIT","Like"],
+    ["Sudipto Poddar","Senior Automotive & EV Validation Engineer | HIL Testing | dSPACE | AI/ML & Data Science","Love"],
+    ["Vishwajeet Kumar","Automotive Engineer | DevOps Architect | Connected Cars | SDV & AI-DV Architect","Like"],
+    ["Rahul Shukla","Co-Founder & CTO, Intelisa","Like"],
+    ["Netraraj Singh Chouhan","Test Automation Engineer | SDET | ISTQB certified | Python | Robot Framework","Like"],
+    ["Sanjay Gour","Solution Architect | Technical Lead | Azure & Microsoft Technologies | GenAI-Assisted Architecture","Like"],
+    ["Zain Abbas Rizvi","BCA Graduate (2026) | Software Developer | Python, Java, JavaScript, MySQL","Like"],
+  ],
+  19: [
+    ["Ashish Ranjan","Senior Project Manager @ HCLTech | Product Development, Strategy Planning | Quality Management","Like"],
+    ["Pooja Jagtap","Senior Business Analyst | Program Manager | Product Manager | Scrum Master | Cyber Security","Like"],
+    ["Sunny Kumar Chauhan","Recruitment | Hiring Insider | Resume Writing | LinkedIn Branding","Interest"],
+    ["Papila Harari","Director at Cognizant Technology Solutions","Like"],
+    ["Mayuri Powar","Tech Architect at Tata Consultancy Services, India | Automotive | MBD | MBSE","Like"],
+    ["Sudipto Poddar","Senior Automotive & EV Validation Engineer | HIL Testing | dSPACE | AI/ML & Data Science","Celebrate"],
+    ["Abhishek Tomar","Sr. HVAC Engineer | Dry Room | Battery FAB","Like"],
+    ["Sham Unde","Tech Lead-QA Testing at Acclivis Technologies Pvt Ltd","Like"],
+    ["Sachin Mulik","Project Lead at Persistent - Automotive V&V | Test Automation - Python | IoT | Telematics","Like"],
+    ["Saquib Ejaz","DevOps Engineer Connected Car | Infotainment | Python | Build and Release Engineer","Like"],
+    ["Netraraj Singh Chouhan","Test Automation Engineer | SDET | ISTQB certified | Python | Robot Framework","Like"],
+    ["Nikhil Naoghare","Building Secure, Scalable, Standalone & Cloud Native apps | Java, Spring Boot, MicroServices","Like"],
+  ],
+  20: [
+    ["Sachin Mulik","Project Lead at Persistent - Automotive V&V | Test Automation - Python | IoT | Telematics","Like"],
+    ["チョベ(パンカジ)","Bilingual | Technical Program Manager | Customer Interface | Leading Cloud IoT & Connected Car Platforms","Like"],
+    ["Sham Unde","Tech Lead-QA Testing at Acclivis Technologies Pvt Ltd","Like"],
+    ["Neha Somra","Immediate Joiner | SystemEngineering for connected vehicle cloud | Technical Project Manager","Like"],
+    ["Nikhil Naoghare","Building Secure, Scalable, Standalone & Cloud Native apps | Java, Spring Boot, MicroServices","Interest"],
+    ["Priyanka Jagdale","Automotive FOD Service System Owner | HMI Infotainment Specialist | Connected Car Service","Like"],
+    ["Saquib Ejaz","DevOps Engineer Connected Car | Infotainment | Python | Build and Release Engineer","Interest"],
+    ["Mayuresh Suryawanshi","Customer Service Engineer at Cadence","Like"],
+    ["Ajinkya Parchure","Ex-entrepreneur | Google Certified Project Manager","Like"],
+    ["Sanjeet Kumar Jha","Senior Software Architect/Lead/Developer | Automotive: ADAS/AD, TCU, Infotainment, IPC","Like"],
+    ["Ganesh Sutar","Delivery & Program Leader | 16+ Yrs in IT & GCC Ops | PRINCE2 | Stakeholder & People Manager","Like"],
+    ["Kshitija Jagtap","GenAI Transformation | Digital Transformation Manager | Banking & Automotive | Scrum Master","Like"],
+    ["Gaurav Singh","Program Manager | Technical Program Management | Automotive","Like"],
+    ["Abhishek Tomar","Sr. HVAC Engineer | Dry Room | Battery FAB","Like"],
+    ["Sonali Chavan","BITS Pilani Alumna | AI-Empowered SAFe Agilist | ISTQB Certified | Infotainment","Like"],
+    ["Bhamini Sharma PMP®","Program Manager at Thermo Fisher Scientific","Like"],
+    ["Sudipto Poddar","Senior Automotive & EV Validation Engineer | HIL Testing | dSPACE | AI/ML & Data Science","Like"],
+    ["Netraraj Singh Chouhan","Test Automation Engineer | SDET | ISTQB certified | Python | Robot Framework","Like"],
+    ["Nitin Mishra","Strategic IT Service Leader | AVP | SAP Service Delivery Manager | 3X SAP Certified","Like"],
+    ["Pramod Devesar","Engineer, Connected Car Services, In-Vehicle Infotainment and Telematics","Like"],
+    ["Rahul Shukla","Co-Founder & CTO, Intelisa","Like"],
+    ["Honey Sulkiya","Management Consulting Manager | JLPT N2 | ITIL","Like"],
+    ["Bhavesh Sharma","Assistant Vice President at Citi India","Like"],
+    ["Anagha Arsud","Automotive Delivery Manager @ Tata Consultancy Services Japan | Certified SAFe® Product Owner","Like"],
+    ["Rohan Kulkarni","Business Development Manager - IoT Product Engineering at Cognizant | ex Tata Elxsi | ex KPIT","Like"],
+    ["Papila Harari","Director at Cognizant Technology Solutions","Like"],
+    ["Tushar Tanpure","EV - Passenger Cars & Trucks, ADAS | Automotive ECU development & validation","Like"],
+    ["Parul Tiwari","Technical Development Lead","Like"],
+    ["Abhishek Prakash","Project Manager @ Capgemini Engineering | Automotive | Certified SAFe PO/PM | MBD | MIL | SIL","Like"],
+    ["Bhaskar Datar","Consultant at Tata Consultancy Services","Like"],
+  ],
+};
+
+const ledger = [
+["Sanjeev Kumar Singh","Chief Operating Officer","Ather Energy","September 2026","https://www.linkedin.com/in/singhsanjeev3010/"],
+["Sankara Narayanan","Managing Director - Talent Strategy, Advanced Technology Center, India","Accenture","September 2026","https://www.linkedin.com/in/sankara-narayanan-7801583/"],
+["Preeti Chopra","Chief Human Resources Officer","Capgemini","September 2026","https://www.linkedin.com/in/preeti-chopra-b322378/"],
+["Sujit Joseph","Lead Business Area HRBP, Electrification, India, Bangladesh & Sri Lanka; Location IR Head","ABB","September 2026","https://www.linkedin.com/in/sujit-joseph-47217a8/"],
+["Shubham Bhardwaj","Vice President - Global HR Transformation","Accenture","September 2026","https://www.linkedin.com/in/shubhambhardwaj2018/"],
+["Prasad Patole","Associate Director of Sales - GCC","L&T Technology Services","September 2026","https://www.linkedin.com/in/prasadpatole/"],
+["Sharan Peddi","Head Talent Acquisition for BFS, HiTech, Telecom & Procurement COE Projects","HCLTech","September 2026","https://www.linkedin.com/in/sharanpeddi/"],
+["Syed Mohammed Aamir","Director-HR Business Partner","Capgemini","September 2026","https://www.linkedin.com/in/syed-mohammed-aamir-87b8a112/"],
+["Mohit Mathur","Head of Innovation","HCLTech","September 2026","https://www.linkedin.com/in/mohitmathurmohitmathur/"],
+["Rajarshi Banerjee","Head of Business Development","ABB","September 2026","https://www.linkedin.com/in/rajarshi-banerjee-a134012/"],
+["V. Edward Angello Thomas","Director - Global Head, Transition, Transformation, Delivery Operations, P&L & Governance","HCL Technologies","September 2026","https://www.linkedin.com/in/edwardangello1878/"],
+["Vikas Singh Baghel","Associate Director - HR","HCLTech","September 2026","https://www.linkedin.com/in/vikassinghbaghel/"],
+["Vineet Tandon","Senior Director of Marketing","HCLTech","September 2026","https://www.linkedin.com/in/vineettandon/"],
+["Kapil Agarwal","Sr. Vice President & Local Division Manager - Process Industries Division, Country Management","ABB","September 2026","https://www.linkedin.com/in/kapil-agarwal2709/"],
+["Sajjad Ahmed Shaik","Global Head of Learning – Insights & Data","Capgemini","September 2026","https://www.linkedin.com/in/sajjadahmedshaik/"],
+["Nitesh Aggarwal","Chief Strategy Officer, Chief Risk Officer & Head, Partnerships and Alliances","Tech Mahindra","September 2026","https://www.linkedin.com/in/niteshaggarwal/"],
+["Rajesh Singh","Senior Vice President","KPIT","September 2026","https://www.linkedin.com/in/rajeshkumsingh/"],
+["Parived Bhatnagar","HR Director / Head HR","Accenture","September 2026","https://www.linkedin.com/in/parived-bhatnagar-9879254/"],
+["Anurag Bakshi","Consumer Insights & Marketing Analytics (AVP)","Accenture","September 2026","https://www.linkedin.com/in/anuragbakshi/"],
+["Shalakha Punekar","Marketing Communications Manager","ABB","September 2026","https://www.linkedin.com/in/shalakha-punekar/"],
+["Arpan Jain","Senior Manager - Finance","MBRDI","September 2026","https://www.linkedin.com/in/arpan-jain-08196944/"],
+["Sourabh Malik","Senior Operations Manager","Accenture","September 2026","https://www.linkedin.com/in/sourabh-malik-47a753193/"],
+["Sudhakar D V","General Manager","Wipro","September 2026","https://www.linkedin.com/in/sudhakardv/"],
+["Musharraf Shaikh","Lead Consultant - Executive Hiring","Capgemini","September 2026","https://www.linkedin.com/in/musharrafshaikh/"],
+["Sanjeev Puri","Senior Engagement Manager","Capgemini","September 2026","https://www.linkedin.com/in/sanjeev-puri-4a3432141/"],
+["Roselin Edwin Charles","Senior Manager","Wipro","September 2026","https://www.linkedin.com/in/roselin-edwin-charles-513580119/"],
+["Sumeet Bhat","Senior Manager","Accenture","September 2026","https://www.linkedin.com/in/sumeet-bhat/"],
+["Rachit Mathur","Vice President","MBRDI","September 2026","https://www.linkedin.com/in/rachit-mathur-3527a746/"],
+["JAYDEEP JONDHALE","Deputy Manager - Utility Ops & Infra Projects","Mahindra Group","September 2026","https://www.linkedin.com/in/jaydeep-jondhale-2a9aa85a/"],
+["Ujjwal Jyoti","Managing Director (Partner)","Accenture","September 2026","https://www.linkedin.com/in/ujjwal-jyoti-b95278b/"],
+["Raghavan Venugopal","Associate Vice President","Quest Global","September 2026","https://www.linkedin.com/in/raghavan-venugopal-25829819/"],
+["Prashant Swadia","Director","General Motors","September 2026","https://www.linkedin.com/in/prashant-swadia-5abb8321/"],
+["Arvind Saxena","MD","General Motors","September 2026","https://www.linkedin.com/in/arvind-saxena-25b5791/"],
+["Devaiah Napanda","Manager - Human Resource","General Motors","September 2026","https://www.linkedin.com/in/devaiahn/"],
+["Prabhakaran R","Information Technology Leader","General Motors","September 2026","https://www.linkedin.com/in/rprabhakaran/"],
+["Shekhar Chhajer","Automotive IT Leader","MBRDI","September 2026","https://www.linkedin.com/in/shekhar-chhajer-506860/"],
+["Abhijit Das","Automotive Engineering Leader / Chief Vehicle Engineer","RNTBCI","September 2026","https://www.linkedin.com/in/abhijit-das-cve/"],
+["Vivek Khariwal","VP","MBRDI","September 2026","https://www.linkedin.com/in/vivek-khariwal-39ab518/"],
+["Dr. Vikraman V","Chief of Renault Engineering","RNTBCI","September 2026","https://www.linkedin.com/in/dr-vikraman-v-37323a59/"],
+["Naresh Tated","Regional Technology Leader","MBRDI","September 2026","https://www.linkedin.com/in/naresh-tated/"],
+["Achuthan Nair","Vice President - Program Renault India","RNTBCI","September 2026","https://www.linkedin.com/in/achuthan-nair-56888312/"],
+["Rashmi Karurmath","Market Head","AUMOVIO","September 2026","https://www.linkedin.com/in/rashmi-karurmath-64aa2a43/"],
+["Madhusoodan M.D","Vehicle NVH - Project & Test Lead","RNTBCI","September 2026","https://www.linkedin.com/in/madhusoodan-m-d-3a381316/"],
+["Dr. Gopichand Agnihotram","Director of AI/ML","Wipro","September 2026","https://www.linkedin.com/in/dr-gopichand-agnihotram-4001b284/"],
+["Anand Tiwari","Global Head and Director - HR","Tata Technologies","September 2026","https://www.linkedin.com/in/anand-k-tiwari/"],
+["Anand Kumar Sinha","CIO","Tata Technologies","September 2026","https://www.linkedin.com/in/anand-kumar-sinha-45a0529/"],
+["Kumar Rethi","VP of AI Platform","Wipro","September 2026","https://www.linkedin.com/in/kumarrethi/"],
+["Dr.-Ing. Sirous Etemadi","Plant Manager","Bosch India","September 2026","https://www.linkedin.com/in/dr-ing-sirous-etemadi-40817b300/"],
+["Vivek Ranjan","CHRO","Wipro","September 2026","https://www.linkedin.com/in/vivek-ranjan-771878/"],
+["Gurpreet Singh Arora","CTO - IT & Operations","Wipro","September 2026","https://www.linkedin.com/in/gurpreet-singh-arora-3614624/"],
+["Shital Sawant","Technical Lead ADAS","Wipro","September 2026","https://www.linkedin.com/in/shitalsawant292/"],
+["Ajay Kumar","CHRO","Tata Electronics","September 2026","https://www.linkedin.com/in/ajaykumar20/"],
+["Hari Shetty","Chief Strategist & Technology Officer","Wipro","September 2026","https://www.linkedin.com/in/harishetty/"],
+["Gaurav Kakati","VP & CTO","KPIT","September 2026","https://www.linkedin.com/in/gaurav-kakati-43151024/"],
+["Surya Narayanan","Senior Process Specialist","Valeo","September 2026","https://www.linkedin.com/in/surya-narayanan-53242914a/"],
+["Saif Khan","MD and CEO","BSH","September 2026","https://www.linkedin.com/in/khansaifsk/"],
+["Jaidev Venkataraman","Head of Global Technical Centre","Valeo","September 2026","https://www.linkedin.com/in/jaidev-venkataraman/"],
+["Manju Kulkarni","VP and Head of Global Sales","Tata Elxsi","September 2026","https://www.linkedin.com/in/manju-kulkarni-02124615/"],
+["Dhruv Srivastava","Automotive EV Leadership","Wipro","September 2026","https://www.linkedin.com/in/dhruvprofile/"],
+["Ashwin Upadhyaya","Associate VP - Talent Acquisition & Workforce","KPIT","September 2026","https://www.linkedin.com/in/ashwin-u-249b49a/"],
+["Shivani Shah","System Technical Project Manager","Valeo","September 2026","https://www.linkedin.com/in/shivani-shah12/"],
+["Thirumala Reddy Idamakanti","System Engineer","Valeo","September 2026","https://www.linkedin.com/in/thirumala-reddy-idamakanti-b768237a/"],
+["Piyush Sagolekar","Associate Director","Accenture India","September 2026","https://www.linkedin.com/in/piyushsagolekar/"],
+["Rahul Kumar","Head - Innovation Excellence","Maruti Suzuki India","September 2026","https://www.linkedin.com/in/rahul-kumar-a85b3723/"],
+["Rohan Chhatwal","VP - Innovation Business Excellence & DE Governance Excellence","Maruti Suzuki India","September 2026","https://www.linkedin.com/in/rohan-chhatwal-7612256/"],
+["Jahnavi Srivastava","Electric Mobility - Manager","Capgemini Invent","September 2026","https://www.linkedin.com/in/jahnavi-srivastava/"],
+["Shaju S","Senior VP - President and Head","Tata Elxsi","September 2026","https://www.linkedin.com/in/shajus/"],
+["Rajesh Ramachandran","Global Chief Digital Officer & MD","ABB","September 2026","https://www.linkedin.com/in/rajeshramachandranurl/"],
+["C V Raman","Executive Committee Member & Former CTO","Maruti Suzuki India","September 2026","https://www.linkedin.com/in/cvraman09/"],
+["Jayant Moon","Senior Director","KPIT","September 2026","https://www.linkedin.com/in/jayant-moon-941065100/"],
+["Saajal Sharma","AVP - Digital Transformation","Accenture India","September 2026","https://www.linkedin.com/in/saajal-sharma-72374933/"]
+];
+
+/* ============================================================
+   PART 1 — PLAIN DATA RENDERING (no chart library required)
+   This runs first and unconditionally, so post metrics, tables,
+   the funnel, ledger, chips and lists always appear even if the
+   Chart.js CDN script below fails to load (e.g. no network, or a
+   sandboxed preview that blocks third-party scripts).
+============================================================ */
+const TEAL = "#1F6F63", TEAL_L = "#4C9C8D", TEAL_XL="#9DC9C0", GOLD = "#B8892F", GOLD_L = "#D9BC7C", INK="#101828";
+
+/* Post table */
+const rateBadge = r => r>=7 ? 'badge' : (r<4 ? 'badge low' : 'badge gold');
+document.getElementById('postTableBody').innerHTML = posts.map(p=>`
+  <tr>
+    <td><b>Post ${p.id}</b>${p.tag ? `<div style="font-size:11px;color:var(--muted);margin-top:2px;">${p.tag}</div>`:''}</td>
+    <td>${p.impressions}</td>
+    <td>${p.likes}</td>
+    <td>${p.comments}</td>
+    <td><span class="${rateBadge(p.rate)}">${p.rate}%</span></td>
+  </tr>`).join('');
+
+/* Funnel (true sequential: sent -> matched) */
+const funnelData = [
+  {label:'Professionals targeted', value:549, max:549},
+  {label:'Confirmed matched', value:216, max:549},
+];
+document.getElementById('funnelBox').innerHTML = funnelData.map(f=>`
+  <div class="funnel-step">
+    <div>${f.label}</div>
+    <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:${(f.value/f.max*100).toFixed(1)}%"></div></div>
+    <div class="val">${f.value}</div>
+  </div>`).join('');
+
+/* Seniority mix of accepted connections */
+document.getElementById('seniorityBox').innerHTML = seniorityData.map(f=>`
+  <div class="funnel-step">
+    <div>${f.label}</div>
+    <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:${(f.value/f.max*100).toFixed(1)}%"></div></div>
+    <div class="val">${f.value}</div>
+  </div>`).join('');
+
+/* Conversion leaders / laggards */
+const convRates = targetVsAccepted.map(o=>({name:o.name, rate: o.target ? (o.accepted/o.target*100) : 0}));
+const convSorted = [...convRates].sort((a,b)=>b.rate-a.rate);
+document.getElementById('convLeaders').innerHTML = convSorted.slice(0,4).map(c=>`<li>${c.name} <b>${Math.round(c.rate)}%</b></li>`).join('');
+document.getElementById('convLaggards').innerHTML = convSorted.slice(-4).reverse().map(c=>`<li>${c.name} <b>${Math.round(c.rate)}%</b></li>`).join('');
+
+/* Target chips */
+document.getElementById('targetChips').innerHTML = targetCompanies.map(c=>`<span class="chip">${c}</span>`).join('');
+
+/* Post people tabs */
+const postTabsEl = document.getElementById('postPeopleTabs');
+const postGridEl = document.getElementById('postPeopleGrid');
+function splitRole(role){
+  const parts = role.split('|').map(s=>s.trim()).filter(Boolean);
+  const first = parts[0] || role;
+  const extra = parts.length - 1;
+  return extra > 0 ? `${first} <span class="more">+${extra} more focus area${extra>1?'s':''}</span>` : first;
+}
+function renderPostPeople(id){
+  postTabsEl.querySelectorAll('button').forEach(b=>b.classList.toggle('active', +b.dataset.id===id));
+  postGridEl.innerHTML = postPeople[id].map(p=>`
+    <div class="person"><div class="name">${p[0]} <span style="font-weight:500;color:var(--muted);font-size:11px;">· ${p[2]}</span></div><div class="role">${splitRole(p[1])}</div></div>`).join('');
+}
+postTabsEl.innerHTML = Object.keys(postPeople).map((id,i)=>`<button data-id="${id}" class="${i===0?'active':''}">Post ${id}</button>`).join('');
+postTabsEl.querySelectorAll('button').forEach(b=> b.addEventListener('click', ()=>renderPostPeople(+b.dataset.id)) );
+renderPostPeople(17);
+
+/* Ledger table: [name, role, company, date, url] */
+const ledgerBody = document.getElementById('ledgerBody');
+const ledgerCount = document.getElementById('ledgerCount');
+let ledgerSort = {key:0, dir:1};
+function parseDate(d){ const t = Date.parse(d); return isNaN(t) ? 0 : t; }
+function renderLedger(filter=''){
+  const f = filter.trim().toLowerCase();
+  let rows = ledger.filter(r => !f || r.slice(0,4).join(' ').toLowerCase().includes(f));
+  const k = ledgerSort.key;
+  rows = [...rows].sort((a,b)=>{
+    let av = k===3 ? parseDate(a[3]) : a[k];
+    let bv = k===3 ? parseDate(b[3]) : b[k];
+    if(typeof av === 'string'){ av = av.toLowerCase(); bv = bv.toLowerCase(); }
+    return av < bv ? -1*ledgerSort.dir : av > bv ? 1*ledgerSort.dir : 0;
+  });
+  ledgerBody.innerHTML = rows.map(r=>`
+    <tr><td><b>${r[0]}</b></td><td>${r[1]||'—'}</td><td>${r[2]||'—'}</td><td>${r[3]||'—'}</td>
+    <td>${r[4] ? `<a class="plink" href="${r[4]}" target="_blank" rel="noopener">View ↗</a>` : '—'}</td></tr>`).join('')
+    || `<tr><td colspan="5" style="color:var(--muted);text-align:center;padding:24px;">No matches</td></tr>`;
+  ledgerCount.textContent = `Showing ${rows.length} of ${ledger.length} verified connections`;
+}
+document.getElementById('ledgerSearch').addEventListener('input', e=>renderLedger(e.target.value));
+document.querySelectorAll('.table-scroll thead th[data-key]').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = +th.dataset.key;
+    if(key < 0) return;
+    if(ledgerSort.key === key){ ledgerSort.dir *= -1; } else { ledgerSort = {key, dir:1}; }
+    document.querySelectorAll('.table-scroll thead th .arrow').forEach(a=>a.textContent='');
+    th.querySelector('.arrow').textContent = ledgerSort.dir===1 ? '▾' : '▴';
+    renderLedger(document.getElementById('ledgerSearch').value);
+  });
+});
+renderLedger();
+
+/* ============================================================
+   PART 2 — CHARTS (requires the Chart.js library from the CDN)
+   Each chart is wrapped so a single failure never blocks another,
+   and a plain-text fallback appears in place of any chart that
+   can't render instead of leaving a blank box.
+============================================================ */
+function chartsAvailable(){ return typeof Chart !== 'undefined'; }
+function chartFallback(canvasId, message){
+  const el = document.getElementById(canvasId);
+  if(!el) return;
+  const box = el.closest('.chart-box') || el.parentElement;
+  box.innerHTML = `<div style="height:100%;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:12.5px;padding:12px;border:1px dashed var(--line);border-radius:6px;">${message}</div>`;
+}
+function safeChart(canvasId, build){
+  try{
+    if(!chartsAvailable()) throw new Error('Chart.js did not load');
+    return build();
+  }catch(e){
+    console.warn('Chart failed:', canvasId, e);
+    chartFallback(canvasId, 'Chart could not load after trying three CDNs — probably a blocked connection. The figures are in the table above.');
+    return null;
+  }
+}
+
+/* All chart-building runs here, only once the loader in <head> has
+   either succeeded or exhausted every CDN it tried. */
+function initCharts(){
+
+if(chartsAvailable()){
+  Chart.defaults.font.family = "'Inter', sans-serif";
+  Chart.defaults.color = "#6B7280";
+  Chart.defaults.font.size = 12;
+}
+
+/* Content performance combo chart */
+safeChart('chartContent', ()=> new Chart(document.getElementById('chartContent'), {
+  data:{
+    labels: posts.map(p=>'Post '+p.id),
+    datasets:[
+      { type:'bar', label:'Impressions', data:posts.map(p=>p.impressions), backgroundColor:TEAL_XL, borderRadius:4, yAxisID:'y', order:2, barPercentage:0.55 },
+      { type:'line', label:'Engagement rate %', data:posts.map(p=>p.rate), borderColor:GOLD, backgroundColor:GOLD, tension:0.35, yAxisID:'y1', order:1, pointRadius:5, pointBackgroundColor:GOLD, borderWidth:2.5 },
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    interaction:{ mode:'index', intersect:false },
+    plugins:{ legend:{ position:'top', align:'end', labels:{ boxWidth:10, usePointStyle:true } } },
+    scales:{
+      y:{ beginAtZero:true, position:'left', grid:{ color:'#EEE9DC' }, title:{display:true, text:'Impressions'} },
+      y1:{ beginAtZero:true, position:'right', grid:{ display:false }, title:{display:true, text:'Engagement rate %'}, max:10 },
+      x:{ grid:{ display:false } }
+    }
+  }
+}));
+
+/* Top orgs chart */
+safeChart('chartOrgs', ()=> new Chart(document.getElementById('chartOrgs'), {
+  type:'bar',
+  data:{
+    labels: topOrgs.map(o=>o.name),
+    datasets:[{ data: topOrgs.map(o=>o.count), backgroundColor: TEAL, borderRadius:3, barThickness:14 }]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>c.raw+' confirmed connections'}} },
+    scales:{ x:{ grid:{ color:'#EEE9DC' } }, y:{ grid:{display:false} } }
+  }
+}));
+
+/* Segment chart */
+safeChart('chartSegment', ()=> new Chart(document.getElementById('chartSegment'), {
+  type:'bar',
+  data:{
+    labels: segmentCoverage.map(s=>s.name),
+    datasets:[{ data: segmentCoverage.map(s=>s.count), backgroundColor: TEAL, borderRadius:3, barThickness:16 }]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false} },
+    scales:{ x:{ grid:{ color:'#EEE9DC' } }, y:{ grid:{display:false} } }
+  }
+}));
+
+/* Target vs Accepted grouped chart */
+safeChart('chartTargetVsAccepted', ()=> new Chart(document.getElementById('chartTargetVsAccepted'), {
+  type:'bar',
+  data:{
+    labels: targetVsAccepted.map(o=>o.name),
+    datasets:[
+      { label:'Targeted', data: targetVsAccepted.map(o=>o.target), backgroundColor: GOLD_L, borderRadius:3, barThickness:9 },
+      { label:'Accepted', data: targetVsAccepted.map(o=>o.accepted), backgroundColor: TEAL, borderRadius:3, barThickness:9 },
+    ]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'top', align:'end', labels:{ boxWidth:10, usePointStyle:true } } },
+    scales:{ x:{ grid:{ color:'#EEE9DC' } }, y:{ grid:{display:false} } }
+  }
+}));
+
+} /* end initCharts */
+
+if (chartsAvailable()) { initCharts(); }
+else { window.addEventListener('chartjs-ready', initCharts, {once:true}); }
+
+/* Scroll spy */
+const navLinks = [...document.querySelectorAll('.rail-nav a')];
+const sections = navLinks.map(a=>document.querySelector(a.getAttribute('href')));
+const spy = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id = '#'+entry.target.id;
+      navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')===id));
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+sections.forEach(s=> s && spy.observe(s));
+</script>
+</body>
+</html>
